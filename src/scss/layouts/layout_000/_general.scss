@@ -1,8 +1,33 @@
+// <header
 .container {
   max-width: 1200px;
   margin: auto;
   padding:0px $mobilePadding;
 }
+
+.header-logo{
+  @include e(svg){
+    max-width:53.3px;
+    max-height:54.62px ;
+    display: inline;
+  }
+  @include e(name){
+
+  }
+  @include e(slogan){
+
+  }
+}
+
+
+.header-navigation{
+  max-width: 28px;
+  max-height: 22px;
+}
+
+
+
+
 .header-search{
   border: 1px solid $lightGrey; 
   border-radius: 27px;
@@ -24,6 +49,24 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// header>
 
 .page{
   padding:0px $mobilePadding;
