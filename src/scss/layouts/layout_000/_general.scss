@@ -1,14 +1,101 @@
-html {
-  @include getCssVar(font-size);
-}
-
-body {
-  @include getCssVar(font-family);
-  font-size: 1rem;
-}
-
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 12px;
+  padding:0px $mobilePadding;
 }
+.header-search{
+  border: 1px solid $lightGrey; 
+  border-radius: 27px;
+  max-width: 433px; 
+  padding: 1.3rem 4rem 1.3rem 1rem;
+  position: relative;
+  
+  @include e(submit){
+    width: 20px; 
+    height: 23px; 
+    background: url(#{$imagesPath}search.png) no-repeat;
+    position: absolute;
+    top: 31%;
+    left: 85%;
+  }
+  @include e(field){
+    min-width: 95%;
+    // покрасить plaseholder
+  }
+}
+
+
+.page{
+  padding:0px $mobilePadding;
+  
+}
+
+.banner{
+  margin: 20px 0;
+  padding: 75px 0;
+  min-height:196px;
+  background-color: $beige;
+
+  @include e(header){
+    padding: 34px 0;
+    color: $black;
+  }
+}
+
+.column-right{
+  margin: 0;
+  background-color: $darkWhite;
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include e(img){
+    min-width: 104%;
+  }
+  @include e(contnent){
+    padding:0 10px;
+
+    @include m(header){
+      @include font($ubuntuFontFamily , $mediumFontWeight);
+      line-height: 28px;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+      margin-top: 44px;
+      margin-bottom:8px ;
+    }
+    @include m(nav){
+      display: none;
+    }
+    @include m(paragraph){
+      @include font($ubuntuFontFamily , $lightFontWeight);
+      font-size: 16px;
+      line-height:18px ;
+      letter-spacing:-0.025em; 
+      margin: 0;
+      padding: 0;
+      margin-bottom: 11px;
+    }
+    @include m(button){
+      color: white;
+      background-color: $orange;
+      min-width: 150px;
+      min-height:47px;
+      border-radius: 25px 25px 25px 25px;
+      padding: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
