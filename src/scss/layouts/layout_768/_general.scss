@@ -38,32 +38,36 @@
 }
 .navigation-list{
     margin: 0;
-    padding: 0;
+    padding: 20px;
     list-style: none;
     @include e(item){
         display: inline-block;
-        margin-right:66px ;
+        margin-right:33px ;
         color: black;
         text-decoration: none;
+        font-family:$ubuntuFontFamily;
+        font-weight:$regularFontWeight;
+        font-size: $baseFontSize;
+        line-height: 18px;
+        letter-spacing: -0.025em;
+        color: $lightDark;
         @include m(fourth){
-            margin-right: 0;
             text-decoration: underline;
-            background: url(#{$imagesPath}svg/icon.svg) no-repeat;
-            min-width: 26px; 
-            min-height: 23px; 
+            &::before{
+                content: "";
+                background: url(../../../i/svg/icon.svg) no-repeat;
+                min-width: 20px;
+                min-height: 14px;
+                display:inline-block;
+                vertical-align: -1px;
+                
+            }
         }
+
     }
 }
-.navigation-list__item_fourth::before{
-    content:"";
-    display: in;
-    background: url(#{$imagesPath}svg/icon.svg) no-repeat;
-    min-width: 26px; 
-    min-height: 23px; 
-}
-.before::before{
-    content:"";
-    background-image: url(#{$imagesPath}svg/icon.svg) no-repeat;
-    min-width: 26px; 
-    min-height: 23px; 
-}
+
+
+
+
+

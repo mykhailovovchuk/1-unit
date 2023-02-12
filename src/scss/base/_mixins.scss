@@ -62,6 +62,12 @@
   font-weight: $w;
 
 }
+@mixin before($modifier){
+  &::before {
+    @content;
+  }
+}
+
 
 // @mixin setCssVar($cssProp, $val) {
 //   $prefix: if(variable-exists(prefix), #{$prefix}, "");
