@@ -4,49 +4,94 @@
   margin: auto;
   padding:0px $mobilePadding;
 }
-
-.header-logo{
-  @include e(svg){
-    max-width:53.3px;
-    max-height:54.62px ;
-    display: inline;
-  }
-  @include e(name){
-
-  }
-  @include e(slogan){
-
-  }
+.header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top:10px ;
 }
 
-
+.header-logo{
+  display: flex;
+  @include e(svg){
+    max-width:53.3px;
+    max-height:54.62px;
+  }
+  @include e(slogan){
+    margin-left: 16px;
+    @include m(header){
+      font-family:$nunitoFontFamily;
+      font-weight:$extraBoldFontWeight;
+      font-size: 36px;
+      line-height: 35px;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+    @include m(slogan){
+      font-family: $quicksandFontFamily;
+      font-weight:$regularFontWeight;
+      font-size: 14px;
+      letter-spacing: 0.01em;
+      margin: 0;
+    }
+  } 
+}
+.header-search768{
+  display: none;
+}
 .header-navigation{
-  max-width: 28px;
-  max-height: 22px;
+  text-align: right;
+  @include e(nav){
+    max-width: 28px;
+    max-height: 22px;
+  }
+  @include e(select){
+    margin-top: 3px;
+  }
+  @include e(language){
+    font-family:$quicksandFontFamily;
+    font-weight:$regularFontWeight;
+    font-size: $baseFontSize;
+    line-height: 20px;
+    letter-spacing: -0.025em;
+    vertical-align: 5px;
+    color:$lightDark;
+  } 
+  @include e(down){
+    max-width: 16px;
+    max-height: 18px;
+
+  }
 }
 
 
 
 
 .header-search{
+  margin-top: 25px;
   border: 1px solid $lightGrey; 
   border-radius: 27px;
-  max-width: 433px; 
+  min-width: 100%;
+  flex-grow: 1;
   padding: 1.3rem 4rem 1.3rem 1rem;
   position: relative;
   
   @include e(submit){
-    width: 20px; 
-    height: 23px; 
-    background: url(#{$imagesPath}search.png) no-repeat;
+    background: url(#{$imagesPath}svg/search.svg) no-repeat;
     position: absolute;
     top: 31%;
-    left: 85%;
+    left: 85%;    
+    width: 26px; 
+    height: 23px; 
   }
   @include e(field){
-    min-width: 95%;
+    min-width: 87%;
+    margin-left: 1.5rem;
     // покрасить plaseholder
   }
+}
+.navigation{
+  display: none;
 }
 
 
@@ -74,9 +119,10 @@
 }
 
 .banner{
-  margin: 20px 0;
-  padding: 75px 0;
-  min-height:196px;
+  min-width: 100px;
+  // margin: 20px 0;
+  // padding: 75px 0;
+  // min-height:196px; не нужо потому что размер от контента внутри 
   background-color: $beige;
 
   @include e(header){
