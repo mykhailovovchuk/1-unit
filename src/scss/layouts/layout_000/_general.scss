@@ -117,19 +117,25 @@
 // columh-left
 .page{
   padding:0px $mobilePadding;
+  
 }
 .column-right{
+  max-width: 100%;
   margin: 0;
   background-color: $darkWhite;
+  border-radius: 10px;
   padding: 10px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include e (navigation){
+    display: none;
+  }
   @include e(img){
-    min-width: 102%;
+    min-width: 101%;
   }
   @include e(contnent){
-    padding:0 10px;
+    padding: 0px 5%;
 
     @include m(header){
       @include font($ubuntuFontFamily , $mediumFontWeight);
@@ -150,15 +156,39 @@
       letter-spacing:-0.025em; 
       margin: 0;
       padding: 0;
-      margin-bottom: 11px;
+      
     }
-    @include m(button){
-      color: white;
+    @include m(button1){
+      margin-top: 30px;
+      color: $white;
       background-color: $orange;
       min-width: 150px;
       min-height:47px;
       border-radius: 25px 25px 25px 25px;
       padding: 0;
+      font-family:$ubuntuFontFamily;
+      font-weight: $boldFontWeight;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    @include m(button2){
+      margin-top: 30px;
+      color: $white;
+      background-color: $orange;
+      min-width: 150px;
+      min-height:47px;
+      border-radius: 25px 25px 25px 25px;
+      padding: 0;
+      font-family:$ubuntuFontFamily;
+      font-weight: $boldFontWeight;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
   }
 }
@@ -170,6 +200,12 @@
   @include e(header){
     margin: 0;
     margin-bottom: 30px;
+    font-family: $ubuntuFontFamily;
+    font-weight: $mediumFontWeight;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.025em;
+    color: #333333;
   }
   @include e(list){
     list-style: none;
@@ -225,6 +261,14 @@
 } 
 .articles{
   max-width: 100%;
+  margin-top: 24px;
+  @include e(header){
+    font-family: $ubuntuFontFamily;
+    font-weight: $mediumFontWeight; 
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.025em;
+  }
 }
 
 .article-container{
@@ -264,18 +308,74 @@
     letter-spacing: -0.025em;
     color: $orange;
   }
-
 }
 
-
+.getting-email000{ 
+  margin-top: 60px;
+  background-color: $purple;
+  padding: 10px 30px 28px 30px;
+  text-align: center;
+  border-radius: 10px;
+  @include e(header){
+    font-family: $ubuntuFontFamily;
+    font-weight: $regularFontWeight;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: -0.025em;
+    color: $white;
+    margin-bottom: 40px;
+  }
+  @include e(paragraph){
+    font-family: $ubuntuFontFamily;
+    font-weight: $regularFontWeight;
+    font-size: $baseFontSize;
+    line-height: 26px;
+    letter-spacing: -0.025em;
+    color: $white;
+    margin-bottom:40px;
+  }
+  @include e(input){
+    background-color: $white;
+    padding: 1.3rem 1rem 1.3rem 1rem;
+    min-width: 100%;
+    text-align: center;
+    font-family: $ubuntuFontFamily;
+    font-weight: $regularFontWeight;
+    font-size: $baseFontSize;
+    line-height: 18px;
+    letter-spacing: -0.025em;
+    border-radius:27px;
+    color: #9D9D9D;
+    margin-bottom: 10px;
+  }
+  @include e(button){
+    margin-top: 10px;
+    font-family: $ubuntuFontFamily;
+    font-weight: $regularFontWeight;
+    font-size: $baseFontSize;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.025em;
+    background-color: $orange;
+    color: $white;
+    padding: 1.3rem 1rem 1.3rem 1rem;
+    min-width: 100%;
+    border-radius:27px;
+    text-transform: uppercase;
+    // margin-bottom: 30px;
+  }
+}
 
 
 
 //column-right end
 // selectors start
 .selectors{
-text-align: center;
+text-align: left;
 margin-bottom: 50px;
+padding: 40;
+margin-left: 10px;
+margin-top: 30px;
   @include e(pages){
     display: inline-block;
     padding: 15px;
