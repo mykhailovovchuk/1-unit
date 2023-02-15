@@ -64,16 +64,21 @@
   <div class="page">
     
       <article class="column-right">
-
-        <img class="column-right__img" src="i/mediumPost.png">
-      
+      <div class="column-right__background">
+      <div class="column-right__img">
+        <img class="column-right__photo" src="i/mediumPost.png">
+        <div class="column-right__databox">
+          <span class="column-right__databox column-right__databox_data">26</span>
+          <span class="column-right__databox column-right__databox_mounth">sep</span>
+        </div>
+      </div>
         <div class="column-right__contnent">
           
           <h2 class="column-right__contnent column-right__contnent_header" >How To Buy, Sell or Rent Items From Doremi</h2>
 
           <div class="column-right__navigation"> 
               <a class="column-right__link" href="#">Admin</a>
-              <a class="column-right__link" href="#">Rent Buy Sell</a>
+              <a class="column-right__link column-right__link_second" href="#">Rent Buy Sell</a>
               <a class="column-right__link" href="#">56 Comments</a>
           </div> 
 
@@ -85,16 +90,20 @@
 
         </div>
 
-
-
-        <img class="column-right__img" src="i/mediumPost.png">
-      
+        <img class="column-right__photo" src="i/mediumPost.png">
+        <div class="column-right__img">
+          
+          <div class="column-right__databox">
+            <span class="column-right__databox column-right__databox_data">26</span>
+            <span class="column-right__databox column-right__databox_mounth">sep</span>
+          </div>
+        </div>
         <div class="column-right__contnent">
           
           <h2 class="column-right__contnent column-right__contnent_header" >How To Buy, Sell or Rent Items From Doremi</h2>
           <div class="column-right__navigation"> 
             <a class="column-right__link" href="#">Admin</a>
-            <a class="column-right__link" href="#">Rent Buy Sell</a>
+            <a class="column-right__link column-right__link_second" href="#">Rent Buy Sell</a>
             <a class="column-right__link" href="#">56 Comments</a>
           </div> 
           <div class="column-right__contnent column-right__contnent_nav"> для больших страниц
@@ -112,16 +121,28 @@
           <input class="column-right__contnent column-right__contnent_button2" type="button" onclick="window.location.href = '#'" value="read more"/>
 
         </div>
+      </div>  
+        <div class="selectors">
+          <a class="selectors__pages" href="#">1</a>
+          <a class="selectors__pages" href="#">2</a>
+          <a class="selectors__pages" href="#">3</a>
+          <a class="selectors__pages" href="#">></a>
+        </div>
 
       </article>
-      <div class="selectors">
+      
+      <!-- <div class="selectors">
         <a class="selectors__pages" href="#">1</a>
         <a class="selectors__pages" href="#">2</a>
         <a class="selectors__pages" href="#">3</a>
         <a class="selectors__pages" href="#">></a>
-      </div>
+      </div> -->
 
   <article class="column-left">
+    <div class="header-search992">
+      <input class="header-search992__field" type="search" name="q" placeholder="Search...">
+      <input class="header-search992__submit" type="submit" value="" >
+    </div> 
     <div class="blog-box">
       <h3 class="blog-box__header">Blog Categories</h3>
       <ul class="blog-box__list">
@@ -132,7 +153,15 @@
         <li class="blog-box__list blog-box__list_item">•<a class="blog-box__list blog-box__list_link" href="#">Worldwide Cities</a>(50)</li>
       </ul>
     </div>
-
+    <div class="getting-email992">
+      <img class="getting-email992__img" src="i/messege.png">
+      <div class="getting-email992__contnent">
+        <h3 class="getting-email992__header" >Join Us & Get Listed</h3>
+        <p class="getting-email992__paragraph">Eiusmod tempor incididunt ut labore <br> exercitation ullamco laboris.</p>
+        <input class="getting-email992__input" type="email" name="q" placeholder="Enter your email"/> <br>
+        <input class="getting-email992__button" type="button" value="subscribe"/>
+      </div>
+    </div>
     <article class="articles">
       <h3 class="articles__header">Our Top Articles</h3>
       <div class="article-container">
@@ -163,6 +192,7 @@
         </div>
       </div>
     </article>
+
   </article>
 
   </div> 
@@ -178,8 +208,6 @@
 
 
 
-
-    
     <!--  JavaScript here -->
     <!-- <script src="js/app.js"></script> -->
     <!-- <script src="js/script.js"></script>-->

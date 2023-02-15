@@ -7,6 +7,15 @@
 .navigation-list768{
     display: none;
 }
+.getting-email000{
+    display: none;
+}
+.header-search992{
+    display: block;
+  }
+  .getting-email992{
+    display: block;
+  }
 .navigation-list{
     @include e(item){
         @include m(fourth){
@@ -21,8 +30,16 @@
 .navigation992{
     display: block;
 }
+.page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
 
-
+}
+.column-left {
+    display: flex;
+    flex-direction: column;
+}
 .navigation-list992{
     display: block;
         .navigation-list{
@@ -77,20 +94,95 @@
         padding-bottom: 33px;
     }
   }
+  .column-right{
+    max-width: 66%;
+    margin: 0;
+    padding: 10px 0px;
 
-// .navigation-list{
-//     @include m(first){
+}
 
-//         &:hover{
-//         text-decoration: underline;
-//         &::before{
-//             content: "";
-//             background: url(../../../i/svg/icon.svg) no-repeat;
-//             min-width: 20px;
-//             min-height: 14px;
-//             display:inline-block;
-//             vertical-align: -1px;
-//         }
-//     }
-//     }
-// }
+
+  .getting-email992{ 
+    margin-top: 60px;
+    background-color: $purple;
+    padding: 10px 30px 28px 30px;
+    text-align: center;
+    border-radius: 10px;
+    @include e(header){
+      font-family: $ubuntuFontFamily;
+      font-weight: $regularFontWeight;
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: -0.025em;
+      color: $white;
+      margin-bottom: 40px;
+    }
+    @include e(paragraph){
+      font-family: $ubuntuFontFamily;
+      font-weight: $regularFontWeight;
+      font-size: $baseFontSize;
+      line-height: 26px;
+      letter-spacing: -0.025em;
+      color: $white;
+      margin-bottom:40px;
+    }
+    @include e(input){
+      background-color: $white;
+      padding: 1.3rem 1rem 1.3rem 1rem;
+      min-width: 100%;
+      text-align: center;
+      font-family: $ubuntuFontFamily;
+      font-weight: $regularFontWeight;
+      font-size: $baseFontSize;
+      line-height: 18px;
+      letter-spacing: -0.025em;
+      border-radius:27px;
+      color: #9D9D9D;
+      margin-bottom: 10px;
+    }
+    @include e(button){
+      margin-top: 10px;
+      font-family: $ubuntuFontFamily;
+      font-weight: $regularFontWeight;
+      font-size: $baseFontSize;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: -0.025em;
+      background-color: $orange;
+      color: $white;
+      padding: 1.3rem 1rem 1.3rem 1rem;
+      min-width: 100%;
+      border-radius:27px;
+      text-transform: uppercase;
+      // margin-bottom: 30px;
+    }
+  }
+  .selectors{
+    text-align: center;
+  }
+
+  .header-search992{
+
+        margin: 20px 0;
+        border: 1px solid $lightGrey; 
+        border-radius: 27px;
+        min-width: 100%;
+        flex-grow: 0;
+        padding: 1.3rem 4rem 1.3rem 1rem;
+        position: relative;
+        
+        @include e(submit){
+          background: url(#{$imagesPath}svg/search.svg) no-repeat;
+          position: absolute;
+          top: 31%;
+          left: 85%;    
+          width: 26px; 
+          height: 23px; 
+        }
+        @include e(field){
+          min-width: 87%;
+          margin-left: 1.5rem;
+          // покрасить plaseholder
+        }
+      }
+  

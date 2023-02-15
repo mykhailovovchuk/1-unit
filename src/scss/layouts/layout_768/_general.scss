@@ -137,6 +137,9 @@
         line-height: 16px;
         letter-spacing: -0.025em;
         color: #333333;
+        @include m(second){
+            color: $orange;
+        }
     }
     @include e(contnent){
         @include m(button1){
