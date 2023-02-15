@@ -10,6 +10,10 @@
 .header-navigation__nav{
     display: none;
 }
+.navigation-list000{
+    display: none;
+}
+
 // START HEADER
 .header{
     align-items: center;
@@ -37,7 +41,11 @@
         margin-left: 1.5rem;
     }
 }
-
+.header-navigation{
+    @include e(select){
+      margin-top: -20px;
+    }
+}
 .navigation-list768{
     margin: 20px;
         .navigation-list{
@@ -100,8 +108,9 @@
 
 
 
-
-
+.header-navigation__select {
+    margin-top: -20px;
+}
 .getting-email000{
     display: flex;
     justify-content: space-between;

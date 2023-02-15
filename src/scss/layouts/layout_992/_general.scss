@@ -45,7 +45,7 @@
         .navigation-list{
             @include e(item){
                 display: inline-block;
-                margin-right:33px ;
+                margin-right:50px ;
                 color:$black;
                 text-decoration: none;
                 font-family:$ubuntuFontFamily;
@@ -54,6 +54,7 @@
                 line-height: 18px;
                 letter-spacing: -0.025em;
                 color: $lightDark;
+                position: relative;
                 &:hover{
                     text-decoration: underline;
                     &::before{
@@ -64,6 +65,18 @@
                         display:inline-block;
                         vertical-align: -1px;
                         margin-right: 3px;
+                        position: absolute;
+                        left: -23px;
+                        top: 2px;
+                        animation: hover .5s ease;
+                        @keyframes hover {
+                          0%{
+                              opacity: 0;
+                          }
+                          100%{
+                              opacity: 1;
+                          }
+                      }
                     }
                 }
             }
@@ -95,12 +108,21 @@
     }
   }
   .column-right{
-    max-width: 66%;
+    max-width: 64%;
     margin: 0;
     padding: 10px 0px;
 
 }
-
+.column-right{
+  @include e(link){
+    &:hover{
+      color: $orange;
+    }
+    @include m(second){
+        color: $black;
+    }
+  }
+}
 
   .getting-email992{ 
     margin-top: 60px;
@@ -154,9 +176,47 @@
       min-width: 100%;
       border-radius:27px;
       text-transform: uppercase;
-      // margin-bottom: 30px;
+
     }
   }
+
+  .blog-box{
+
+    @include e(list){
+      @include m(item){
+        &:hover{
+          color: #2B5AE1;
+        }
+        @include m(hover){
+          color:black;
+          &:hover{
+            color: #2B5AE1;
+          }
+        }
+      }
+      @include m(link){
+        &:hover{
+          color: $orange;
+        }
+        @include m(hover){
+          color:black;
+          &:hover{
+            color: $orange;
+          }
+        }  
+      }
+    }
+  }
+
+@keyframes show {
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+}
+}
+
   .selectors{
     text-align: center;
   }
@@ -182,7 +242,6 @@
         @include e(field){
           min-width: 87%;
           margin-left: 1.5rem;
-          // покрасить plaseholder
         }
       }
   
