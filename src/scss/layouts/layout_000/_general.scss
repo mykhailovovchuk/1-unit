@@ -10,6 +10,7 @@
 }
 .page{
   display: block;
+
 }
 .column-left{
   display: block;
@@ -22,6 +23,11 @@
 }
 .burger{
   display: none;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding:0px $mobilePadding;
 }
 // burger
 .navigation-list000{
@@ -72,11 +78,6 @@
   }
 }
 // burger end
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding:0px $mobilePadding;
-}
 .header{
   display: flex;
   justify-content: space-between;
@@ -161,8 +162,9 @@
 // HEADER END
 // BANER START
 .banner{
+  background-color:  var(--#{$prefix}background-color);
   min-width: 100px;
-  background-color: $beige;
+  // background-color: $beige;
   text-align: center;
   @include e(header){
     display: block;
